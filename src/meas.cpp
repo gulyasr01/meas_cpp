@@ -7,4 +7,17 @@
 
 #include "meas.h"
 
+Meas::Meas(void)
+{
+	// todo
+}
 
+Meas::~Meas(void)
+{
+	// todo
+}
+
+int Meas::Meas_Start()
+{
+	return 0;
+}
