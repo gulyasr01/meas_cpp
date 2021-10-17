@@ -50,10 +50,11 @@ class Meas
 private:
 	MatrixXu64 cycle;
 	MatrixXu64 total;
+
+public:
 	FilterParams filter_params;
 	MeasParams meas_params;
 
-public:
 	// Member fucntion definitons
 	Meas(void);
 	~Meas(void);
@@ -62,6 +63,7 @@ public:
 	int Meas_Stop(void);
 	void Meas_evCycFin(int signum);
 	void Meas_evMeasFin(int signum);
+	int Meas_FilterInit(void);
 };
 
 
