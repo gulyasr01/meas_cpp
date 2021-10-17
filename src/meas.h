@@ -43,14 +43,13 @@ typedef struct
 	bool repeated; // if the measurement finishes the kernel driver start aucomatically
 } MeasParams;
 
-typedef Matrix<unsigned int, PSD_NUM, r4096> Matrix4k;
-typedef Vector<unsigned int, r4096> Spectrum4k;
+typedef Matrix<uint64_t, Dynamic, Dynamic>MatrixXu64; //
 
 class Meas
 {
 private:
-	Matrix4k cycle;
-	Matrix4k total;
+	MatrixXu64 cycle;
+	MatrixXu64 total;
 	FilterParams filter_params;
 	MeasParams meas_params;
 

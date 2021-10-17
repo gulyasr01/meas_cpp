@@ -9,12 +9,14 @@
 
 Meas::Meas(void)
 {
-	// todo
+	cycle = MatrixXu64::Zero(PSD_NUM, r4096);
+	total = MatrixXu64::Zero(PSD_NUM, r4096);
 }
 
 Meas::~Meas(void)
 {
-	// todo
+	cycle.resize(0, 0);
+	total.resize(0, 0);
 }
 
 int Meas::Meas_Start()
